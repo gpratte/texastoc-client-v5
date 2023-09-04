@@ -1,5 +1,5 @@
 
-export const VERSION = "4.00";
+export const VERSION = "5.00";
 
 // This UI Application (React/Redux)
 // Local

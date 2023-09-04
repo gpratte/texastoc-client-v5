@@ -7,10 +7,10 @@ import QuarterlySeasonStandings from "./QuarterlySeasonStandings";
 class QuarterlySeason extends React.Component {
 
   render() {
-    const {start, end, numGamesPlayed, qtocCollected, players, payouts} = this.props.value;
+    const {start, ended, numGamesPlayed, qtocCollected, players, payouts} = this.props.value;
 
-    const startDate = moment(start).tz('America/Chicago').format('MM/DD')
-    const endDate = moment(end).tz('America/Chicago').format('MM/DD')
+    const startDate = moment({ year : start[0], month : start[1]-1, day : start[2] }).tz('America/Chicago').format('MM/DD')
+    const endDate = moment({ year : ended[0], month : ended[1]-1, day : ended[2] }).tz('America/Chicago').format('MM/DD')
 
     return (
       <div>

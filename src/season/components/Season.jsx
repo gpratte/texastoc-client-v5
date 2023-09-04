@@ -82,7 +82,7 @@ class Season extends React.Component {
 
     const season = league.season.data;
     const startDate = moment(season.start).tz('America/Chicago').format('YYYY');
-    const endDate = moment(season.end).tz('America/Chicago').format('YYYY');
+    const endDate = moment(season.ended).tz('America/Chicago').format('YYYY');
     const numGuarenteed = numGuarenteedPayouts(season);
     const quarterlySeasons = league.quarterlySeasons.data;
     const games = league.games.data;

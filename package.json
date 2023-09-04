@@ -27,7 +27,7 @@
     "websocket": "^1.0.31"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "build:localhost": "env-cmd -f .env.localhost npm run-script build",
     "build:testtexastoc": "env-cmd -f .env.testtexastoc npm run-script build",

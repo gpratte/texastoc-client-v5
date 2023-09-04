@@ -27,7 +27,7 @@ class Games extends React.Component {
             <Card>
               <Card.Header>
                 <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                  {moment(game.date).tz('America/Chicago').format('MM/DD/YYYY')}
+                  {moment({ year : game.date[0], month : game.date[1]-1, day : game.date[2] }).tz('America/Chicago').format('MM/DD/YYYY')}
                 </Accordion.Toggle>
                 {
                   game.finalized &&
