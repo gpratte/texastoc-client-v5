@@ -11,6 +11,6 @@ Using node version 18.x and npm version 8.x
 ## Production Deployment
 Runs on nginx version 1.14.0
 
-## Current Branch: 01-clone
+## Current Branch:  02-fix-invalid-date
 
-Clone the code from [texastoc-v4-client](https://github.com/gpratte/texastoc-v4-client)
+The moment library expects month to be zero based.
