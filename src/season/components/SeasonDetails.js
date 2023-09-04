@@ -6,10 +6,10 @@ class SeasonDetails extends React.Component {
 
   render() {
     const {
-      start, end, numGamesPlayed, totalCombinedAnnualTocCalculated, kittyCalculated} = this.props.value;
+      start, ended, numGamesPlayed, totalCombinedAnnualTocCalculated, kittyCalculated} = this.props.value;
 
-    const startDate = moment(start).tz('America/Chicago').format('MM/DD/YYYY')
-    const endDate = moment(end).tz('America/Chicago').format('MM/DD/YYYY')
+    const startDate = moment({ year : start[0], month : start[1]-1, day : start[2] }).tz('America/Chicago').format('MM/DD/YYYY')
+    const endDate = moment({ year : ended[0], month : ended[1]-1, day : ended[2] }).tz('America/Chicago').format('MM/DD/YYYY')
 
     return (
       <div>

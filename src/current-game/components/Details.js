@@ -32,7 +32,7 @@ class Details extends React.Component {
       kittyCalculated, prizePotCalculated, payouts
     } = this.props.game.data;
 
-    const gameDate = moment(date).tz('America/Chicago').format('MM/DD')
+    const gameDate = moment({ year : date[0], month : date[1]-1, day : date[2] }).tz('America/Chicago').format('MM/DD')
     const tocPlusKitty = totalCombinedTocCalculated + kittyCalculated;
 
     return (

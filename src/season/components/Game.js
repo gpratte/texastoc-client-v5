@@ -10,7 +10,7 @@ class Game extends React.Component {
     const {date, hostName, seasonGameNum, quarterlyGameNum, totalCollected, annualTocCollected, annualTocFromRebuyAddOnCalculated, payouts, players, prizePotCalculated, quarterlyTocCollected, kittyCalculated} = this.props.value;
 
     const annualToc = annualTocCollected + annualTocFromRebuyAddOnCalculated;
-    const gameDate = moment(date).tz('America/Chicago').format('MM/DD/YYYY')
+    const gameDate = moment({ year : date[0], month : date[1]-1, day : date[2] }).tz('America/Chicago').format('MM/DD/YYYY')
 
     return (
       <div>
